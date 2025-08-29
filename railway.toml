@@ -1,0 +1,7 @@
+[build]
+builder = "paketobuildpacks/builder:base"
+buildCommand = "dotnet publish -c Release -o out"
+
+[deploy]
+startCommand = "dotnet out/Koffiemachine.dll"
+restartPolicyType = "ON_FAILURE"
